@@ -1,5 +1,5 @@
 # input_processing.py
-# <YOUR NAME>, ENSF 692 Spring 2025
+# Marley Cheema, ENSF 692 Spring 2025
 # A terminal-based program for processing computer vision changes detected by a car.
 # Detailed specifications are provided via the Assignment 2 README file.
 # You must include the code provided below but you may delete the instructional comments.
@@ -21,7 +21,7 @@ class Sensor:
         pass
 
     # Replace these comments with your function commenting
-    def update_status(): # You may decide how to implement the arguments for this function
+    def update_status(): # You may decide how to implement the"arguments for this function
         pass
 
 
