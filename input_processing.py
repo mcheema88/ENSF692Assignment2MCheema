@@ -18,10 +18,14 @@
 # You do not need to provide additional commenting above this class, just the user-defined functions within the class
 class Sensor:
 
-    # Must include a constructor that uses default values
-    # You do not need to provide commenting above the constructor
+    # This is setting up objects for my sensor and giving it the default values as instructed by the assignment
+    # Essentially this will give it 3 field that we can update with inputs in the main code
+    # The default conditions are going to be green, no and no. However input can change that
+    # And then my plan is to use update status as my way to check and give a reccomendation
     def __init__(self):
-        pass
+        self.colour = "green"
+        self.pedestrian = "no"
+        self.vehicle = "no"
 
     # Replace these comments with your function commenting
     def update_status(): # You may decide how to implement the"arguments for this function
@@ -34,15 +38,14 @@ class Sensor:
 def print_message(sensor):
     pass
 
-ssdddd
 
 # Complete the main function below
 def main():
 
+    my_sensor = Sensor()
+
+
     potential_inputs = [1,2,3,0];
-
-
-
     print("Are Changes are detected for vision input?")
     
     while True: 
