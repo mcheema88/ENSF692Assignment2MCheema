@@ -26,26 +26,30 @@ class Sensor:
         self.colour = "green"
         self.pedestrian = "no"
         self.vehicle = "no"
-        self.currentStatus = "proceed"
+        self.currentStatus = 1
 
     # Replace these comments with your function commenting
-    def update_status(sensor): # You may decide how to implement the"arguments for this function
-        currentStatus;
+    def update_status(self): # You may decide how to implement the"arguments for this function
         if sensor.pedestrian or sensor.vehicle == "yes":
-            currentStatus = "STOP"
-        elif sensor.colour == "red"
-            currentStatus = "STOP"
+            sensor.currentStatus = 3
+        elif sensor.colour == "red":
+            sensor.currentStatus = 3
         elif sensor.colour == "yellow":
-            currentStatus = "Caution"
-        elif:
-            currentStatus == "Proceed"
+            sensor.currentStatus = 2
+        else:
+            sensor.currentStatus = 1
 
 
 
 # The sensor object should be passed to this function to print the action message and current status
 # Replace these comments with your function commenting
 def print_message(sensor):
-    pass
+    if sensor.currentStatus == 1:
+        print("Proceed")
+    elif sensor.currentStatus == 2:
+        print("Caution")
+    elif sensor.currentStatus == 3:
+        print("STOP")
 
 
 # Complete the main function below
@@ -71,6 +75,8 @@ def main():
             colour = input("What change has been identified: ");
             if colour in acceptable_colours:
                 my_sensor.colour = colour
+                my_sensor.update_status()
+                print_message(my_sensor)
                 break
             else:
                 print("Invalid vision change")
@@ -81,6 +87,8 @@ def main():
             responses = input("What change has been identified: ");
             if responses_pedestrian in acceptable_responses:
                 my_sensor.pedestrian = responses_pedestrian
+                my_sensor.update_status()
+                print_message(my_sensor)
                 break
             else:
                 print("Invalid vision change")
@@ -91,6 +99,8 @@ def main():
             responses_vehicle = input("What change has been identified: ");
             if responses_vehicle in acceptable_responses:
                 my_sensor.vehicle = responses_vehicle
+                my_sensor.update_status()
+                print_message(my_sensor)
                 break
             else:
                 print("Invalid vision change")
