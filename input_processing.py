@@ -21,7 +21,6 @@ class Sensor:
     # Must include a constructor that uses default values
     # You do not need to provide commenting above the constructor
     def __init__(self):
-        dddd
         pass
 
     # Replace these comments with your function commenting
@@ -39,7 +38,12 @@ def print_message(sensor):
 
 # Complete the main function below
 def main():
-    print("\n***ENSF 692 Car Vision Detector Processing Program***\n")
+    print("Are Changes are detected for vision input?")
+    condition = int(input("Select 1 for light, 2 for pedestrian, 3 for vehicle, or 0 to end the program:1 "));
+
+    if condition == 1 :
+        colour = input("What change has been identified?: ");
+
 
 
 
