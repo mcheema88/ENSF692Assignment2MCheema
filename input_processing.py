@@ -30,14 +30,14 @@ class Sensor:
 
     # Replace these comments with your function commenting
     def update_status(self): # You may decide how to implement the"arguments for this function
-        if sensor.pedestrian or sensor.vehicle == "yes":
-            sensor.currentStatus = 3
-        elif sensor.colour == "red":
-            sensor.currentStatus = 3
-        elif sensor.colour == "yellow":
-            sensor.currentStatus = 2
+        if self.pedestrian == "yes" or self.vehicle == "yes":
+            self.currentStatus = 3
+        elif self.colour == "red":
+            self.currentStatus = 3
+        elif self.colour == "yellow":
+            self.currentStatus = 2
         else:
-            sensor.currentStatus = 1
+            self.currentStatus = 1
 
 
 
