@@ -1,5 +1,7 @@
 # input_processing.py
-# Marley Cheema, ENSF 692 Spring 2025
+# Marley Cheema, ENSF 692 Spring 2025 - Sarah Shah
+
+
 # A terminal-based program for processing computer vision changes detected by a car.
 # Detailed specifications are provided via the Assignment 2 README file.
 # You must include the code provided below but you may delete the instructional comments.
@@ -19,6 +21,7 @@ class Sensor:
     # Must include a constructor that uses default values
     # You do not need to provide commenting above the constructor
     def __init__(self):
+        dddd
         pass
 
     # Replace these comments with your function commenting
