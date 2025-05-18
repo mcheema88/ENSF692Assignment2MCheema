@@ -50,12 +50,23 @@ class Sensor:
 # Replace these comments with your function commenting
 def print_message(sensor):
     if sensor.currentStatus == 1:
+        print("\n")
         print("Proceed")
+        print("\n")
+        print("Light = " + sensor.colour + " , Pedestrian = " + sensor.pedestrian + " , Vehicle = " + sensor.vehicle + " .")
+        print("\n")
     elif sensor.currentStatus == 2:
+        print("\n")
         print("Caution")
+        print("\n")
+        print("Light = " + sensor.colour + " , Pedestrian = " + sensor.pedestrian + " , Vehicle = " + sensor.vehicle + " .")
+        print("\n")
     elif sensor.currentStatus == 3:
+        print("\n")
         print("STOP")
-
+        print("\n")
+        print("Light = " + sensor.colour + " , Pedestrian = " + sensor.pedestrian + " , Vehicle = " + sensor.vehicle + " .")
+        print("\n")
 
 # Complete the main function below
 def main():
