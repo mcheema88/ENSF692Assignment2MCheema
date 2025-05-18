@@ -34,7 +34,7 @@ class Sensor:
 def print_message(sensor):
     pass
 
-
+ssdddd
 
 # Complete the main function below
 def main():
@@ -51,9 +51,6 @@ def main():
             break
         else:
             print("You must select either 1, 2, 3 or 0.")
-
-
-
 
 
     if condition == 1 :
