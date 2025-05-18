@@ -1,5 +1,7 @@
 # ENSF 692 Spring 2025 - Assignment 2
 
+Marley Cheema
+
 ## 📚 Learning Outcomes
 * Accept user input through varied menu options
 * Validate user input through exception handling
