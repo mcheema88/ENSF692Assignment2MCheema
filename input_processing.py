@@ -38,14 +38,26 @@ def print_message(sensor):
 
 # Complete the main function below
 def main():
+
+    potential_inputs = [1,2,3,0];
+
+
+
     print("Are Changes are detected for vision input?")
-    condition = int(input("Select 1 for light, 2 for pedestrian, 3 for vehicle, or 0 to end the program:1 "));
+    
+    while True: 
+        condition = int(input("Select 1 for light, 2 for pedestrian, 3 for vehicle, or 0 to end the program: "));
+        if condition in potential_inputs:
+            break
+        else:
+            print("You must select either 1, 2, 3 or 0.")
+
+
+
+
 
     if condition == 1 :
         colour = input("What change has been identified?: ");
-
-
-
 
 
 
