@@ -27,6 +27,11 @@ class Sensor:
         self.pedestrian = "no"
         self.vehicle = "no"
         self.currentStatus = 1
+        self.potential_inputs = [1,2,3,0]
+        self.acceptable_colours = ["green", "yellow", "red"]
+        self.acceptable_responses = ["yes", "no"]
+
+
 
     # Replace these comments with your function commenting
     def update_status(self): # You may decide how to implement the"arguments for this function
@@ -58,22 +63,22 @@ def main():
     my_sensor = Sensor()
 
 
-    potential_inputs = [1,2,3,0];
+    #potential_inputs = [1,2,3,0];
     print("Are Changes are detected for vision input?")
     
     while True: 
         condition = int(input("Select 1 for light, 2 for pedestrian, 3 for vehicle, or 0 to end the program: "));
-        if condition in potential_inputs:
+        if condition in my_sensor.potential_inputs:
             break
         else:
             print("You must select either 1, 2, 3 or 0.")
 
 
     if condition == 1 :
-        acceptable_colours = ["green", "yellow", "red"]
+       #acceptable_colours = ["green", "yellow", "red"]
         while True: 
             colour = input("What change has been identified: ");
-            if colour in acceptable_colours:
+            if colour in my_sensor.acceptable_colours:
                 my_sensor.colour = colour
                 my_sensor.update_status()
                 print_message(my_sensor)
@@ -82,10 +87,10 @@ def main():
                 print("Invalid vision change")
 
     if condition == 2 :
-        acceptable_responses = ["yes", "no"]
+        #acceptable_responses = ["yes", "no"]
         while True: 
-            responses = input("What change has been identified: ");
-            if responses_pedestrian in acceptable_responses:
+            responses_pedestrian = input("What change has been identified: ");
+            if responses_pedestrian in my_sensor.acceptable_responses:
                 my_sensor.pedestrian = responses_pedestrian
                 my_sensor.update_status()
                 print_message(my_sensor)
@@ -94,10 +99,10 @@ def main():
                 print("Invalid vision change")
 
     if condition == 3 :
-        acceptable_responses = ["yes", "no"]
+        #acceptable_responses = ["yes", "no"]
         while True: 
             responses_vehicle = input("What change has been identified: ");
-            if responses_vehicle in acceptable_responses:
+            if responses_vehicle in my_sensor.acceptable_responses:
                 my_sensor.vehicle = responses_vehicle
                 my_sensor.update_status()
                 print_message(my_sensor)
