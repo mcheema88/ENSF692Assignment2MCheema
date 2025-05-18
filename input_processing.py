@@ -26,10 +26,19 @@ class Sensor:
         self.colour = "green"
         self.pedestrian = "no"
         self.vehicle = "no"
+        self.currentStatus = "proceed"
 
     # Replace these comments with your function commenting
-    def update_status(): # You may decide how to implement the"arguments for this function
-        pass
+    def update_status(sensor): # You may decide how to implement the"arguments for this function
+        currentStatus;
+        if sensor.pedestrian or sensor.vehicle == "yes":
+            currentStatus = "STOP"
+        elif sensor.colour == "red"
+            currentStatus = "STOP"
+        elif sensor.colour == "yellow":
+            currentStatus = "Caution"
+        elif:
+            currentStatus == "Proceed"
 
 
 
@@ -61,6 +70,7 @@ def main():
         while True: 
             colour = input("What change has been identified: ");
             if colour in acceptable_colours:
+                my_sensor.colour = colour
                 break
             else:
                 print("Invalid vision change")
@@ -69,7 +79,8 @@ def main():
         acceptable_responses = ["yes", "no"]
         while True: 
             responses = input("What change has been identified: ");
-            if responses in acceptable_responses:
+            if responses_pedestrian in acceptable_responses:
+                my_sensor.pedestrian = responses_pedestrian
                 break
             else:
                 print("Invalid vision change")
@@ -77,16 +88,17 @@ def main():
     if condition == 3 :
         acceptable_responses = ["yes", "no"]
         while True: 
-            responses = input("What change has been identified: ");
-            if responses in acceptable_responses:
+            responses_vehicle = input("What change has been identified: ");
+            if responses_vehicle in acceptable_responses:
+                my_sensor.vehicle = responses_vehicle
                 break
             else:
                 print("Invalid vision change")
 
-
+    if condition == 0:
+        return
 
 # Conventional Python code for running main within a larger program
 # No additional code should be included below this
 if __name__ == '__main__':
     main()
-
