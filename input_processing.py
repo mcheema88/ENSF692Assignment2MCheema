@@ -65,6 +65,24 @@ def main():
             else:
                 print("Invalid vision change")
 
+    if condition == 2 :
+        acceptable_responses = ["yes", "no"]
+        while True: 
+            responses = input("What change has been identified: ");
+            if responses in acceptable_responses:
+                break
+            else:
+                print("Invalid vision change")
+
+    if condition == 3 :
+        acceptable_responses = ["yes", "no"]
+        while True: 
+            responses = input("What change has been identified: ");
+            if responses in acceptable_responses:
+                break
+            else:
+                print("Invalid vision change")
+
 
 
 # Conventional Python code for running main within a larger program
