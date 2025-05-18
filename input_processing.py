@@ -1,4 +1,3 @@
-# input_processing.py
 # Marley Cheema, ENSF 692 Spring 2025 - Sarah Shah
 
 
@@ -72,7 +71,6 @@ def print_message(sensor):
 def main():
 
     my_sensor = Sensor()
-
 
     #potential_inputs = [1,2,3,0];
     while True:    
