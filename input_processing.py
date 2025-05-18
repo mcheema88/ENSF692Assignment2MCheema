@@ -64,54 +64,59 @@ def main():
 
 
     #potential_inputs = [1,2,3,0];
-    print("Are Changes are detected for vision input?")
+    while True:    
+        
+        print("Are Changes are detected for vision input?")
     
-    while True: 
-        condition = int(input("Select 1 for light, 2 for pedestrian, 3 for vehicle, or 0 to end the program: "));
-        if condition in my_sensor.potential_inputs:
-            break
-        else:
-            print("You must select either 1, 2, 3 or 0.")
 
-
-    if condition == 1 :
-       #acceptable_colours = ["green", "yellow", "red"]
         while True: 
-            colour = input("What change has been identified: ");
-            if colour in my_sensor.acceptable_colours:
-                my_sensor.colour = colour
-                my_sensor.update_status()
-                print_message(my_sensor)
+            condition = int(input("Select 1 for light, 2 for pedestrian, 3 for vehicle, or 0 to end the program: "));
+            if condition in my_sensor.potential_inputs:
                 break
             else:
-                print("Invalid vision change")
+                print("You must select either 1, 2, 3 or 0.")
 
-    if condition == 2 :
-        #acceptable_responses = ["yes", "no"]
-        while True: 
-            responses_pedestrian = input("What change has been identified: ");
-            if responses_pedestrian in my_sensor.acceptable_responses:
-                my_sensor.pedestrian = responses_pedestrian
-                my_sensor.update_status()
-                print_message(my_sensor)
-                break
-            else:
-                print("Invalid vision change")
 
-    if condition == 3 :
-        #acceptable_responses = ["yes", "no"]
-        while True: 
-            responses_vehicle = input("What change has been identified: ");
-            if responses_vehicle in my_sensor.acceptable_responses:
-                my_sensor.vehicle = responses_vehicle
-                my_sensor.update_status()
-                print_message(my_sensor)
-                break
-            else:
-                print("Invalid vision change")
+        if condition == 1 :
+        #acceptable_colours = ["green", "yellow", "red"]
+            while True: 
+                colour = input("What change has been identified: ");
+                if colour in my_sensor.acceptable_colours:
+                    my_sensor.colour = colour
+                    my_sensor.update_status()
+                    print_message(my_sensor)
+                    break
+                else:
+                    print("Invalid vision change")
 
-    if condition == 0:
-        return
+        if condition == 2 :
+            #acceptable_responses = ["yes", "no"]
+            while True: 
+                responses_pedestrian = input("What change has been identified: ");
+                if responses_pedestrian in my_sensor.acceptable_responses:
+                    my_sensor.pedestrian = responses_pedestrian
+                    my_sensor.update_status()
+                    print_message(my_sensor)
+                    break
+                else:
+                    print("Invalid vision change")
+
+        if condition == 3 :
+            #acceptable_responses = ["yes", "no"]
+            while True: 
+                responses_vehicle = input("What change has been identified: ");
+                if responses_vehicle in my_sensor.acceptable_responses:
+                    my_sensor.vehicle = responses_vehicle
+                    my_sensor.update_status()
+                    print_message(my_sensor)
+                    break
+                else:
+                    print("Invalid vision change")
+
+        if condition == 0:
+            return
+
+
 
 # Conventional Python code for running main within a larger program
 # No additional code should be included below this
