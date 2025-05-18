@@ -57,7 +57,13 @@ def main():
 
 
     if condition == 1 :
-        colour = input("What change has been identified?: ");
+        acceptable_colours = ["green", "yellow", "red"]
+        while True: 
+            colour = input("What change has been identified: ");
+            if colour in acceptable_colours:
+                break
+            else:
+                print("Invalid vision change")
 
 
 
