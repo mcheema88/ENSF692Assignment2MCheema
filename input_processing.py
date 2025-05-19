@@ -2,6 +2,14 @@
 
 #MARLEY CHEEMA
 
+#Really enjoyed this assignment, took me a while to figure out how to structure, but once I started coding things started coming to me
+# I liked using classes, at first I didnt read the README1.md file completely so I didnt know I had to use classes
+# but once I figured out, I have come to the realization that save having to write so much code in main()
+# which is awesome and keeps the code cleaner, and also helps makes storing of variables clear
+
+#Had some problmes with syntax and error which took a while, I used chatgpt for some light troubleshooting(no code generation)
+# which was super helpful and I will reference!
+
 # This class is base of the code, and is used for initialization, setting fields and tracking inputs
 #originally I thought I only need 3 fields -> colour, pedestrian and vehicle but over time I realized that to
 # truly eliminate global variables, conditions could also just be moved within this class and be held and used to compare 
@@ -109,7 +117,9 @@ def main():
 
         #Identical logic as above just for these 2 conditions (an entry of 2 or 3) which deal with vehicle and pedestrian
         #Additionally have corresponding names and fields
-        # however the updates_status() function apart of the class is the same, along with print_message()
+        # however the updates_status() function apart of the class is the same, along with print_message() and are used the same, just looking
+        # at slightly different fields
+    
         if condition == 2 :
             #acceptable_responses = ["yes", "no"]
             while True: 
